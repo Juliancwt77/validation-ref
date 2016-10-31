@@ -1,0 +1,37 @@
+<h1>Hello world!</h1>
+
+<% if(errors.length > 0) { %>
+  <h2>Error found</h2>
+  <ul>
+  <% for (var error in errors[0]) { %>
+    <li><%= errors[0][error].message %></li>
+  <% } %>
+  </ul>
+<% } %>
+
+<!-- The above form looks like this -->
+<form action="#" method="post">
+    <div class="row">
+        <div class="twelve columns">
+            <label for="email">Your email</label>
+            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="email" name="user[email]">
+        </div>
+        <div class="twelve columns">
+            <label for="username">Your username</label>
+            <input class="u-full-width" type="text" id="username" name="user[username]">
+        </div>
+        <div class="twelve columns">
+            <label for="password">Your password</label>
+            <input class="u-full-width" type="password" placeholder="six chars long" id="password" name="user[password]">
+        </div>
+        <!-- <div class="twelve columns">
+            <label for="firstname">Your firstname</label>
+            <input class="u-full-width" type="text" id="firstname" name="user[firstname]">
+        </div>
+        <div class="twelve columns">
+            <label for="lastname">Your lastname</label>
+            <input class="u-full-width" type="text" id="lastname" name="user[lastname]">
+        </div> -->
+    </div>
+    <input class="button-primary" type="submit" value="Submit">
+</form>
